@@ -1,26 +1,30 @@
 #include <unistd.h>
 
-int ft_putchar(int i)
+int ft_putchar(char c)
 {
-    write(1,&i,1);
+    write(1,&c,1);
     return (0);
 }
 
-void ft_is_negative(int n);
+void ft_is_negative(int n)
 {
-    int n;
-
-    n = 'N';
-    while (n < '0')
+    if (n < 0)
     {
-        ft_putchar(n);
-        n = n - 1;
+        ft_putchar('N');
+    } 
+    else 
+    {
+        ft_putchar('P');
     }
 }
 
 int  main()
 {
-    ft_is_negative();
+    ft_is_negative(2);
+    ft_putchar('\n');
+    ft_is_negative(-44541);
+    ft_putchar('\n');    
+    ft_is_negative(0);
     ft_putchar('\n');
     return (0);
 }
