@@ -8,27 +8,26 @@ int ft_putchar(char c)
 }
 
 void ft_div_mod(int a, int b, int *div, int *mod)
-{
-        a=12,b=8;
+{        
         *div = a / b;
         *mod = a % b;     
 }
 
-int  main()
-{  
+int main()
+{
     int div;
     int mod;
 
     div = 0;
     mod = 0;
-    printf("div:%d | mod:%d", div, mod);
-    printf("\n");
     ft_div_mod(12, 8, &div, &mod);
-    printf("div:%d | mod:%d", div, mod);
-    printf("\n");
+    printf("test1 : a = 12, b = 8\n");
+    div == 1 && mod == 4
+        ? printf("✔️ Correct\n")
+        : printf("❌ Wrong\n\tdiv : '%d', expected : '1'\n\tmod: '%d', expected: '4'\n", div, mod);
     ft_div_mod(42, 5, &div, &mod);
-    printf("div:%d | mod:%d", div, mod);
-    printf("\n");
-
-    return (0);
+    printf("test1 : a = 42, b = 5\n");
+    div == 8 && mod == 2
+        ? printf("✔️ Correct\n")
+        : printf("❌ Wrong\n\tdiv : '%d', expected : '8'\n\tmod: '%d', expected: '2'\n", div, mod);
 }
