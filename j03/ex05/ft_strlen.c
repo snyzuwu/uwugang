@@ -1,20 +1,19 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int ft_putchar(char c)
-{
-    write(1,&c,1);
-    return (0);
-}
+
 
 int ft_strlen(char *str)
 {
-       int i;
-       i = 0;
-       while (str[i] != '\0')
-       { i++;
-       }
-       return(i);
+    int i;
+    i = 0;
+    int size;
+    size = 0;
+    while (str[i++] != '\0')
+    {
+        size++;
+    }
+    return size;
 }
 
 int main()

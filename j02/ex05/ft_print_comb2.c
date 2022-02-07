@@ -12,11 +12,7 @@ void ft_print_comb2(void)
     char b;
     char c;
     char d;
-    char e;
-    char f;
-    e = (a, b);
-    f = (c, d);
-    e != f;
+    
     a = '0';
     b = '0';
     c = '0';
